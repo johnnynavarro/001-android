@@ -2,11 +2,18 @@ from kivymd.app import MDApp
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
+from kivy.properties import StringProperty
+import csv
+resposta = []
+ler = open("resultado.csv", "r")
+resposta = ler.readlines()
+ler.close()
 
 class Tela1(Screen):
-    pass
-
-
+    prefeito = StringProperty()
+    def imprimir(self):
+        print("candidato:".join([self.prefeito]))
+        pass
 class Tela2(Screen):
     pass
 

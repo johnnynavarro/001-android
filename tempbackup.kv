@@ -1,0 +1,46 @@
+ScreenManager:
+    Tela1:
+    Tela2:
+    Tela3:
+
+<Tela1>:
+
+    name: 'tela1'
+    ScrollView:
+    MDFloatLayout:
+        #orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 650
+                #valing: 'top'
+        Image:
+            orientation: 'vertical'
+            size_hint: None, None
+            source: 'inop.png'
+            pos_hint: {'center_x':0.05, 'center_y': 0.98}
+
+        MDToolbar:
+            title: "Dia 15 de novembro teremos eleição para prefeito quem o Sr(a) votaria?"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+        MDLabel:
+            text: 'Júnior Nenzim'
+            pos_hint: {'center_x':0.6, 'center_y':0.8}
+
+        MDCheckbox:
+            group: 'grupo'
+            id: chk1
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.8}
+            on_active:
+                value = self.active
+                if value: True
+                prefeito = 'Júnior do Nenzim'
+                root.imprimir(prefeito)
+
+            on_press:
+                root.manager.current = 'tela2'
