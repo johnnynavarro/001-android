@@ -2,6 +2,10 @@ ScreenManager:
     Tela1:
     Tela2:
     Tela3:
+    Tela4:
+    Tela5:
+    Tela6:
+    Tela7:
 
 <Tela1>:
 
@@ -129,6 +133,11 @@ ScreenManager:
             pos_hint: {'center_x':0.80,'center_y':0.1}
             on_press: root.manager.current = 'tela3'
 
+        MDFillRoundFlatButton:
+            text: 'Voltar'
+            pos_hint: {'center_x':0.20,'center_y':0.1}
+            on_press: root.manager.current = 'tela1'
+
         MDLabel:
             text: 'Não Sabe/Não Opinou'
             pos_hint: {'center_x':0.7, 'center_y':0.3}
@@ -158,6 +167,46 @@ ScreenManager:
             source: 'inop.png'
             pos_hint: {'center_x':0.05, 'center_y': 0.98}
 
+        MDToolbar:
+            title: "Em qual dos candidatos você Não VOTARIA DE JEITO NENHUM?"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+
+        MDLabel:
+            text: 'Júnior do Nenzim'
+            pos_hint: {'center_x':0.6, 'center_y':0.80}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.80}
+            on_press: root.manager.current = 'tela2'
+
+
+        MDLabel:
+            text: ' Rigo Teles'
+            pos_hint: {'center_x':0.6, 'center_y':0.75}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.75}
+            on_press: root.manager.current = 'tela2'
+
+
+        MDLabel:
+            text: ' Dr. Abraão'
+            pos_hint: {'center_x':0.6, 'center_y':0.70}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.70}
+            on_press: root.manager.current = 'tela2'
+
         MDLabel:
             text: 'Não Sabe/Não Opinou'
             pos_hint: {'center_x':0.6, 'center_y':0.3}
@@ -169,7 +218,220 @@ ScreenManager:
             pos_hint: {'center_x':0.8, 'center_y':0.3}
             on_press: root.manager.current = 'tela2'
 
+
         MDFillRoundFlatButton:
-            text: 'Inicio'
-            pos_hint: {'center_x':0.5,'center_y':0.1}
-            on_press: root.manager.current = 'tela1'
+            text: 'Próximo'
+            pos_hint: {'center_x':0.80,'center_y':0.1}
+            on_press: root.manager.current = 'tela4'
+
+
+        MDFillRoundFlatButton:
+            text: 'Voltar'
+            pos_hint: {'center_x':0.20,'center_y':0.1}
+            on_press: root.manager.current = 'tela2'
+<Tela4>:
+    name: 'tela4'
+
+    MDFloatLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 650
+                #valing: 'top'
+        Image:
+            orientation: 'vertical'
+            size_hint: None, None
+            source: 'inop.png'
+            pos_hint: {'center_x':0.05, 'center_y': 0.98}
+
+        MDToolbar:
+            title: "Quem seria o seu candidato a vereador nas próximas eleições?"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+        MDTextField:
+            hint_text: "Name"
+            mode: "rectangle"
+            size_hint: 0.75, None
+            icon_right: "arrow-down-drop-circle-outline"
+            icon_right_color: app.theme_cls.primary_color
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        MDFillRoundFlatButton:
+            text: 'Próximo'
+            pos_hint: {'center_x':0.80,'center_y':0.1}
+            on_press: root.manager.current = 'tela5'
+
+        MDFillRoundFlatButton:
+            text: 'Voltar'
+            pos_hint: {'center_x':0.20,'center_y':0.1}
+            on_press: root.manager.current = 'tela3'
+
+<Tela5>:
+    name: 'tela5'
+    MDFloatLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 650
+                #valing: 'top'
+        Image:
+            orientation: 'vertical'
+            size_hint: None, None
+            source: 'inop.png'
+            pos_hint: {'center_x':0.05, 'center_y': 0.98}
+
+        MDToolbar:
+            title: "Quem o Sr(a) considera a maior liderança política em sua cidade?"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+        MDTextField:
+            hint_text: "Name"
+            mode: "rectangle"
+            size_hint: 0.75, None
+            icon_right: "arrow-down-drop-circle-outline"
+            icon_right_color: app.theme_cls.primary_color
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        MDFillRoundFlatButton:
+            text: 'Próximo'
+            pos_hint: {'center_x':0.80,'center_y':0.1}
+            on_press: root.manager.current = 'tela6'
+
+        MDFillRoundFlatButton:
+            text: 'Voltar'
+            pos_hint: {'center_x':0.20,'center_y':0.1}
+            on_press: root.manager.current = 'tela4'
+
+        MDLabel:
+            text: 'Não Sabe/Não Opinou'
+            pos_hint: {'center_x':0.7, 'center_y':0.3}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.3}
+            on_press: root.manager.current = 'tela6'
+
+<Tela6>:
+    name: 'tela6'
+
+    MDFloatLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 650
+                #valing: 'top'
+        Image:
+            orientation: 'vertical'
+            size_hint: None, None
+            source: 'inop.png'
+            pos_hint: {'center_x':0.05, 'center_y': 0.98}
+
+        MDToolbar:
+            title: "Você aprova ou desprova o mandato do prefeito(a) atual?"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+
+        MDLabel:
+            text: 'Aprova'
+            pos_hint: {'center_x':0.6, 'center_y':0.80}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.80}
+            on_press: root.manager.current = 'tela2'
+
+
+        MDLabel:
+            text: ' Desaprova'
+            pos_hint: {'center_x':0.6, 'center_y':0.75}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.75}
+            on_press: root.manager.current = 'tela2'
+
+
+#        MDLabel:
+#            text: ' Dr. Abraão'
+#            pos_hint: {'center_x':0.6, 'center_y':0.70}
+#
+#        MDCheckbox:
+#            group: 'grupo'
+#            size_hint: None, None
+#            size: dp(40), dp (40)
+#            pos_hint: {'center_x':0.8, 'center_y':0.70}
+#            on_press: root.manager.current = 'tela6'
+
+        MDLabel:
+            text: 'Não Sabe/Não Opinou'
+            pos_hint: {'center_x':0.6, 'center_y':0.3}
+
+        MDCheckbox:
+            group: 'grupo'
+            size_hint: None, None
+            size: dp(40), dp (40)
+            pos_hint: {'center_x':0.8, 'center_y':0.3}
+            on_press: root.manager.current = 'tela6'
+
+
+        MDFillRoundFlatButton:
+            text: 'Próximo'
+            pos_hint: {'center_x':0.80,'center_y':0.1}
+            on_press: root.manager.current = 'tela7'
+
+
+        MDFillRoundFlatButton:
+            text: 'Voltar'
+            pos_hint: {'center_x':0.20,'center_y':0.1}
+            on_press: root.manager.current = 'tela5'
+
+<Tela7>:
+    name: 'tela7'
+    ScrollView:
+    MDFloatLayout:
+        orientation: 'horizontal'
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 650
+                #valing: 'top'
+        Image:
+            orientation: 'vertical'
+            size_hint: None, None
+            source: 'inop.png'
+            pos_hint: {'center_x':0.05, 'center_y': 0.98}
+
+        MDToolbar:
+            title: "Sexo"
+            pos_hint: {'center_x':0.5, 'center_y': 0.90}
+
+        MDToolbar:
+            title: "Idade"
+            pos_hint: {'center_x':0.5, 'center_y': 0.70}
+
+
+        MDToolbar:
+            title: "Escolaridade"
+            pos_hint: {'center_x':0.5, 'center_y': 0.50}
+
+
+        MDToolbar:
+            title: "Renda"
+            pos_hint: {'center_x':0.5, 'center_y': 0.30}
