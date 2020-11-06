@@ -3,19 +3,25 @@ from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.theming import ThemeManager
 from kivy.properties import StringProperty
+from kivy.properties import ObjectProperty
+from kivy.uix.scrollview import ScrollView
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.button import Button
+from kivy.core.window import Window
+from kivy.app import runTouchApp
 import csv
-resposta = []
-ler = open("resultado.csv", "r")
-resposta = ler.readlines()
-ler.close()
+# resposta = []
+# ler = open("resultado.csv", "r")
+# resposta = ler.readlines()
+# ler.close()
+
+
 
 class Tela1(Screen):
-
-    prefeito = StringProperty()
-    def imprimir(self):
-        print("candidato:".join([self.prefeito]))
-
-
+    # prefeito = StringProperty()
+    # def imprimir(self):
+    #     print("candidato:".join([self.prefeito]))
+    pass
 class Tela2(Screen):
     pass
 
@@ -49,11 +55,11 @@ sm.add_widget(Tela5(name='tela5'))
 sm.add_widget(Tela6(name='tela6'))
 sm.add_widget(Tela7(name='tela7'))
 
-class DemoApp(MDApp):
+class InopApp(MDApp):
 
     def build(self):
-        screen = Builder.load_file('android.kv')
+        screen = Builder.load_file('android1.kv')
         return screen
 
 
-DemoApp().run()
+InopApp().run()
