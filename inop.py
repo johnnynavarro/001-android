@@ -1,3 +1,4 @@
+from kivy.uix.floatlayout import FloatLayout
 from kivymd.app import MDApp
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -14,14 +15,18 @@ import csv
 # ler = open("resultado.csv", "r")
 # resposta = ler.readlines()
 # ler.close()
-
+from kivymd.uix.selectioncontrol import MDCheckbox
 
 
 class Tela1(Screen):
-    # prefeito = StringProperty()
-    # def imprimir(self):
-    #     print("candidato:".join([self.prefeito]))
-    pass
+    prefeito = StringProperty()
+    def imprimir(self):
+        print("candidato:".join([self.prefeito]))
+    def __init__(self,tela1=[],**kwargs):
+        super().__init__(**kwargs)
+        for i in tela1:
+            self.ids.texto.add_widget(Tela1(text=i))
+    # pass
 class Tela2(Screen):
     pass
 
@@ -58,7 +63,10 @@ sm.add_widget(Tela7(name='tela7'))
 class InopApp(MDApp):
 
     def build(self):
-        screen = Builder.load_file('android1.kv')
+        screen = Builder.load_file('android.kv')
+        # Um teste do scroolview
+
+
         return screen
 
 

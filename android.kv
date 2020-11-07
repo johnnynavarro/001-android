@@ -29,6 +29,8 @@ ScreenManager:
 
         Opcao:
             pos_hint: {'center_x':0.8, 'center_y':0.17}
+            on_press:
+
 
 
 <Botao@MDFillRoundFlatButton>:
@@ -44,6 +46,9 @@ ScreenManager:
     size_hint: None, None
     size: dp(40), dp (40)
 #    pos_hint: {'center_x':0.8, 'center_y':0.8}
+
+
+
 <CaixaTexto@MDTextField>:
     hint_text: "Name"
     mode: "rectangle"
@@ -54,7 +59,13 @@ ScreenManager:
 <Tela1>:
 
     name: 'tela1'
-
+    ScrollView:
+        MDBoxLayout:
+            cols: 1
+            id: teste
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
 
     Default:
         Pergunta:
@@ -68,13 +79,23 @@ ScreenManager:
         MDLabel:
             text: 'Candidato A'
             pos_hint: {'center_x':0.6, 'center_y':0.75}
+            size_hint_y: None
+            height: 200
 
         Opcao:
             pos_hint: {'center_x':0.8, 'center_y':0.75}
-
+            size_hint_y: None
+            height: 200
+            on_press:
+                value = self.active
+                if value: True
+                root.prefeito = 'Candidato A'
+                root.imprimir()
 
         MDLabel:
             text: 'Candidato B'
+            size_hint_y: None
+            height: 200
             pos_hint: {'center_x':0.6, 'center_y':0.65}
 
         Opcao:
@@ -82,13 +103,19 @@ ScreenManager:
 
         MDLabel:
             text: 'Candidato C'
+            size_hint_y: None
+            height: 200
             pos_hint: {'center_x':0.6, 'center_y':0.55}
 
         Opcao:
             pos_hint: {'center_x':0.8, 'center_y':0.55}
+            size_hint_y: None
+            height: 200
 
         MDLabel:
             text: 'Candidato D'
+            size_hint_y: None
+            height: 200
             pos_hint: {'center_x':0.6, 'center_y':0.45}
 
         Opcao:
