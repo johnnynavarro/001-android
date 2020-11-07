@@ -1,0 +1,106 @@
+ScreenManager:
+    Tela1:
+    Tela2:
+    Tela3:
+    Tela4:
+    Tela5:
+    Tela6:
+    Tela7:
+
+<Tela1>:
+    name: 'tela1'
+    ScrollView:
+        MDBoxLayout:
+            cols: 2
+            id: teste
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+            MDFloatLayout:
+                size_hint_y: None
+                height: 200
+                MDLabel:
+                    text: 'PORRA'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+                MDCheckbox:
+                    size_hint: None, None
+                    group: 'group'
+                    pos_hint: {'center_x':0.6, 'center_y':0.17}
+
+
+
+
+
+
+    MDFloatLayout:
+        canvas:
+            Color:
+                rgba: app.theme_cls.primary_color
+            Rectangle:
+                size: self.width-0, self.height-10
+                pos: 0, 900
+
+        Image:
+            orientation: 'vertical'
+            size_hint: 0.2, 0.2
+            source: 'inop.png'
+            pos_hint: {'center_x':0.07, 'center_y': 0.94}
+        MDToolbar:
+            title: 'teste'
+            pos_hint: {'center_x':0.5, 'center_y': 0.85}
