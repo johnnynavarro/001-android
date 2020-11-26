@@ -9,26 +9,37 @@ ScreenManager:
 
 <Tela1>:
     name: 'tela1'
-    MDFloatLayout:
-#        pos: 0, 700
-        canvas.after:
-            Color:
-                rgba: app.theme_cls.primary_color
-            Rectangle:
-                size: self.width-0, self.height-10
-                pos: 0, 700
+    MDToolbar:
+#        title: 'TESTS'
+        elevation: 12
+        pos_hint: {"top": 1 }
+
+    MDLabel:
+        size_hint: 2, 2
+        pos_hint: {'center_x':1.1, 'center_y':0.95}
+        theme_text_color:"Custom"
+        text_color:1, 1, 1, 1
+        halign: 'left'
+        text: " No próximo dia 15 de novembro teremos eleições para prefeito,\r\nem quem vc votaria se a aleição fosse hoje?"
+        bold: True
 
 
+    MDBoxLayout:
+        orientation: "vertical"
+        Image:
+    #                orientation: "vertical"
+            size_hint: 0.2, 0.2
+            source: 'inop.png'
+            pos_hint: {'center_x':0.94, 'center_y':0.97}
         ScrollView:
-            MDGridLayout:
+            GridLayout:
                 cols: 1
-                orientation: 'vertical'
                 size_hint_y: None
                 height: self.minimum_height
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -39,7 +50,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -50,7 +61,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -61,7 +72,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -72,7 +83,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -83,7 +94,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -94,7 +105,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -105,7 +116,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -116,7 +127,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height: 100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -127,7 +138,7 @@ ScreenManager:
 
                 MDFloatLayout:
                     size_hint_y: None
-                    height: 200
+                    height:100
                     MDLabel:
                         text: 'PORRA'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
@@ -135,15 +146,3 @@ ScreenManager:
                         size_hint: None, None
                         group: 'group'
                         pos_hint: {'center_x':0.6, 'center_y':0.17}
-    Image:
-        orientation: "vertical"
-        size_hint: 0.2, 0.2
-        source: 'inop.png'
-        pos_hint: {'center_x':0.07, 'center_y': 0.97 }
-
-
-    MDToolbar:
-        title: "Porra"
-        elevation: 10
-        type: "top"
-        pos_hint: {'center_x':0.50, 'center_y': 0.90 }
